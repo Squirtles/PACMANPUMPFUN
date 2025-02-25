@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pac-Man Multi-Munch</title>
+    <title>Pac-Man Multi-Munch: Huge Edition</title>
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
+
 <body>
-    <canvas id="gameCanvas" width="560" height="620"></canvas>
+    <div class="container">
+        <div class="header">
+            <div class="pump-coin">
+                <span class="coin-icon">💰</span>
+                <span>Pump Fun Coins: <span id="pfc-total">0</span></span>
+                <span class="future-info">[Future Info: Coming Soon]</span>
+            </div>
+        </div>
+        <div class="game-container">
+            <canvas id="gameCanvas" width="1120" height="620"></canvas> <!-- Fixed size for now -->
+        </div>
+        <div class="sidebar">
+            <div id="scores">
+                <p>Player 1: 0 | PFC: 0</p>
+                <p>Player 2: 0 | PFC: 0</p>
+                <p>Player 3: 0 | PFC: 0</p>
+                <p>Player 4: 0 | PFC: 0</p>
+            </div>
+        </div>
+        <div class="chat-box">
+            <div id="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="username" placeholder="Temp Username" maxlength="10">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
     <script src="src/js/game.js"></script>
 </body>
+
 </html>
